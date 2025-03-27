@@ -1,0 +1,55 @@
+1. 
+
+SELECT *
+FROM `students`
+WHERE YEAR (`date_of_birth`) = 1990
+ORDER BY `date_of_birth`;
+
+2.
+
+SELECT *
+FROM `courses`
+WHERE `cfu` > 10
+ORDER BY `cfu`;
+
+3.
+
+SELECT *, TIMESTAMPDIFF(YEAR, `date_of_birth` , CURDATE()) as `age`
+FROM `students`
+WHERE TIMESTAMPDIFF(YEAR, `date_of_birth` , CURDATE()) > 30
+ORDER BY `age`;
+
+4.
+
+SELECT *
+FROM `courses`
+WHERE `period` = "I semestre"
+AND `year` = 1
+ORDER BY `id`;
+
+5.
+
+SELECT *
+FROM `exams`
+WHERE `hour` > "14%"
+ORDER BY `hour`;
+
+6.
+
+SELECT *
+FROM `degrees`
+WHERE `level` = "magistrale"
+ORDER BY `id`;
+
+
+7.
+
+SELECT COUNT(*)
+FROM `departments`
+
+8.
+
+SELECT COUNT(*)
+FROM `teachers`
+WHERE `phone` IS NULL;
+
